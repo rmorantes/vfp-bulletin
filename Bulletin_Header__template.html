@@ -1,0 +1,12 @@
+<section id='bulletin-header'>
+  <h2> Smedley D. Butler Brigade Veterans for Peace - Chapter 9 </h2>
+  <h1> Weekly Bulletin </h1>
+  <div id='bulletin-header-links'>
+    <? const MyLinks = [['Home', 'http://www.smedleyvfp.com/'],['National', 'https://www.veteransforpeace.org/'], ['About Us', 'http://www.smedleyvfp.com/about-us/'], ['Donate', 'http://www.smedleyvfp.com/donate/']] ?>
+     <? for (var i = 0; i < MyLinks.length; i++) { ?>
+      <a href= <?!= MyLinks[i][1] ?> >
+        <?!= MyLinks[i][0] ?>
+      </a>
+    <? } ?>
+  </div>
+</section>

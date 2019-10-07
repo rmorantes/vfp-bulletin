@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target='_top'>
+    <?!= getContentHtmlOutput('Bulletin__styles'); ?>
+    <?!= getContentHtmlOutput('Bulletin_Header__styles') ?>
+    <?!= getContentHtmlOutput('Bulletin_FocusGroups__styles') ?>
+    <?!= getContentHtmlOutput('Bulletin_Entries__styles') ?>
+    <?!= getContentHtmlOutput('Bulletin_Notice__styles') ?>
+    <?!= getContentHtmlOutput('Bulletin_Footer__styles') ?>
+  </head>
+
+  <body id='bulletin'>
+    <div id='bulletin-content'>
+    <?!= getContentTemplate('Bulletin_Header__template') ?>
+    <?!= getContentTemplate('Bulletin_FocusGroups__template') ?>
+    <?!= getContentTemplate('Bulletin_Entries__template') ?>
+    <?!= getContentTemplate('Bulletin_Notice__template') ?>
+    <?!= getContentTemplate('Bulletin_Footer__template') ?>
+    </div>
+  </body>
+</html>

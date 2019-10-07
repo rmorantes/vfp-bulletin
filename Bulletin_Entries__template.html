@@ -1,0 +1,50 @@
+<section id='bulletin-entries'>
+  <? const entries = getEntries() ?>
+  <? for (var i = 0; i < entries.length; i++) { ?>
+    <article>
+      <h3>
+        <?!= entries[i][1] || entries[i][12] ?>
+      </h3>
+
+      <div id='bulletin-entry-content'>
+        <div id='bulletin-entry-summary'>
+
+          <? if (entries[i][4]) { ?>
+            <img
+            alt='bulletin entry thumbnail'
+            id='bulletin-entry-thumbnail'
+            src= <?!= 'cid:entryImage' + i ?>
+            >
+          <? } ?>
+
+          <? if (entries[i][5] && entries[i][6] && entries[i][8]) { ?>
+            <div id='bulletin-entry-summary-detail'>
+              <img id='bulletin-entry-summary-icon' src='cid:iconTime'>
+              <p> <?!= getDateAndTime(entries[i][5], entries[i][6], entries[i][8])  ?> </p>
+            </div>
+          <? } ?>
+
+          <? if (entries[i][7]) { ?>
+            <div id='bulletin-entry-summary-detail'>
+              <img id='bulletin-entry-summary-icon' src='cid:iconPlace'>
+              <p> <?!= entries[i][7] ?> </p>
+            </div>
+          <? } ?>
+
+          <? if (entries[i][3]) { ?>
+            <div id='bulletin-entry-summary-detail'>
+              <img id='bulletin-entry-summary-icon' src='cid:iconGlobe'>
+              <p>
+                <a id='link' href=<?!= entries[i][3] ?>>
+                  <?!= entries[i][3] ?>
+                </a>
+              </p>
+            </div>
+          <? } ?>
+        </div>
+
+        <pre><?!=entries[i][2]?></pre>
+      </div>
+    </article>
+  <? } ?>
+</section>
